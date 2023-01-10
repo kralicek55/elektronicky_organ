@@ -1,6 +1,9 @@
 joystickbit.initJoystickBit()
 basic.showIcon(IconNames.Heart)
 basic.forever(function () {
+    if (joystickbit.getRockerValue(joystickbit.rockerType.Y) <= 200) {
+        music.playMelody("C5 B A G F G A B ", 140)
+    }
     if (joystickbit.getRockerValue(joystickbit.rockerType.X) <= 200) {
         music.playTone(262, music.beat(BeatFraction.Half))
     }
